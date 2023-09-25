@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 
 namespace Library;
 
-public class Inventario
+public class Inventario : ICharacter
 {
     public List<Item> ListaItems { get; set; }
     public Inventario()
@@ -25,5 +26,13 @@ public class Inventario
     public List<Item> MostrarInventario()
     {
         return ListaItems;
+    }
+    public void PrintInfo()
+    {
+        Console.WriteLine("Items:");
+        foreach (var item in ListaItems)
+        {
+            Console.WriteLine($"Name: {item.name}, Attack: {item.ataque}, Defense: {item.defensa}");
+        }
     }
 }

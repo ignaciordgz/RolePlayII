@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Library;
 
-public class Caballero
+public class Caballero : ICharacter
 {
     public string Name { get; set; }
     public int Health { get; set;}
@@ -14,5 +16,12 @@ public class Caballero
         this.Name = nombre;
         this.Health = 130;
         this.funda = new Inventario();
+    }
+    public void PrintInfo()
+    {
+        Console.WriteLine($"Nombre del caballero : {this.Name}");
+        Console.WriteLine($"Vida : {this.Health}");
+        Console.WriteLine("Items : ");
+        funda.PrintInfo();
     }
 }

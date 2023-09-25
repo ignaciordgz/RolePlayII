@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 
 namespace Library;
 
-public class Mago
+public class Mago : ICharacter
 {
     public string Name { get; set; }
     public int Health { get; set; }
@@ -18,5 +19,9 @@ public class Mago
     public void AgregarHechizos(List<Hechizos> hechizos)
     {
         Hechizos.AddRange(hechizos);
+    }
+    public void PrintInfo()
+    {
+        Console.WriteLine($"{this.Name}\n{this.Health}\n");
     }
 }
