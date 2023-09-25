@@ -21,7 +21,6 @@ public class Caballero : ICharacter
     {
         Console.WriteLine($"Nombre del caballero : {this.Name}");
         Console.WriteLine($"Vida : {this.Health}");
-        Console.WriteLine("Items : ");
         funda.PrintInfo();
     }
 }

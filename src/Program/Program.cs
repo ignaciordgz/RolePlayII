@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using Library;
+using System.Runtime.CompilerServices;
 
 namespace Program
 {
@@ -97,7 +98,8 @@ namespace Program
             Item Espada1 = new Item("Espada", 20, 3);
             Item Armadura1 = new Item("Armadura", 0, 30);
             
-            Gervacio2.funda.AgregarItem(Espada1);
+            ((Caballero)Gervacio2).funda.AgregarItem(Espada1);
+            ((Caballero)Gervacio2).funda.AgregarItem(Armadura1);
             
             Gervacio2.PrintInfo();
         }

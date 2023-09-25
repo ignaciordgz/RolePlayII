@@ -32,7 +32,7 @@ public class Inventario : ICharacter
         Console.WriteLine("Items:");
         foreach (var item in ListaItems)
         {
-            Console.WriteLine($"Name: {item.name}, Attack: {item.ataque}, Defense: {item.defensa}");
+            Console.WriteLine($"[{item.name}] Ataque: {item.ataque} Defensa: {item.defensa}");
         }
     }
 }
