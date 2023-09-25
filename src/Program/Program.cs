@@ -91,6 +91,15 @@ namespace Program
             Console.WriteLine(MagoAD.PeleaMagoElfo(Rasagast,Lego));
             Console.WriteLine("------------------");
             Console.WriteLine(Combate.Curar(Rasagast,Lego,Thorin,Gervacio));
+
+            ICharacter Gervacio2 = new Caballero("GERVACIO2");
+            
+            Item Espada1 = new Item("Espada", 20, 3);
+            Item Armadura1 = new Item("Armadura", 0, 30);
+            
+            Gervacio2.funda.AgregarItem(Espada1);
+            
+            Gervacio2.PrintInfo();
         }
         }
     }
