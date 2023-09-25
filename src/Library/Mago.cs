@@ -20,8 +20,10 @@ public class Mago : ICharacter
     {
         Hechizos.AddRange(hechizos);
     }
-    public void PrintInfo()
+   public void PrintInfo()
     {
-        Console.WriteLine($"{this.Name}\n{this.Health}\n");
+        Console.WriteLine($"Nombre del Mago : {this.Name}");
+        Console.WriteLine($"Vida : {this.Health}");
+        SombreroMagico.PrintInfo();
     }
 }

@@ -26,6 +26,7 @@ namespace Program
             Console.WriteLine("------------------");
             
             ICharacter Thorin = new Enano("Thorin");
+
             Item Hacha = new Item("Hacha", 15, 2);
             Item Escudo = new Item("Escudo", 0, 25);
 
@@ -36,30 +37,32 @@ namespace Program
             int AtaqueEnano = EnanoAD.CalcularAtaqueTotal(((Enano)Thorin).mochila.ListaItems);
             int DefensaEnano = EnanoAD.CalcularDefensaTotal(((Enano)Thorin).mochila.ListaItems);
 
-            Console.WriteLine($"Nombre del Enano : {((Enano)Thorin).Name}");
-            Console.WriteLine($"Ataque Total : {AtaqueEnano}");
-            Console.WriteLine($"Defensa Total : {DefensaEnano}");
+            Thorin.PrintInfo();
+            Console.WriteLine($"Ataque total del Enano : {AtaqueEnano}");
+            Console.WriteLine($"Defensa total del Enanoo : {DefensaEnano}");
             Console.WriteLine("------------------");      
     
     
             ICharacter Lego = new Elfo("Lego");
+
             Item Arco = new Item("Arco", 25, 0);
             Item Traje = new Item("Traje", 0, 25);
             
             ((Elfo)Lego).Bolsa.AgregarItem(Arco);
             ((Elfo)Lego).Bolsa.AgregarItem(Traje);
+
             Combate ElfoAD = new Combate();
-            
             int AtaqueElfo = ElfoAD.CalcularAtaqueTotal(((Elfo)Lego).Bolsa.ListaItems);
             int DefensaElfo = ElfoAD.CalcularDefensaTotal(((Elfo)Lego).Bolsa.ListaItems);
             
-            Console.WriteLine($"Nombre del Elfo : {((Elfo)Lego).Name}");
+            Lego.PrintInfo();
             Console.WriteLine($"Ataque Total : {AtaqueElfo}");
             Console.WriteLine($"Defensa Total : {DefensaElfo}");
             Console.WriteLine("------------------");
     
              
-            ICharacter Rasagast = new Mago("Rasagast");   
+            ICharacter Rasagast = new Mago("Rasagast"); 
+            
             Item BastonMagico = new Item("Baston Magico",25,2);  
             
             List<Hechizos> Hechizos = new List<Hechizos>{new Hechizos("Bola de fuego", 25),new Hechizos("Incinerar", 30),new Hechizos("Congelar", 5)};
@@ -82,6 +85,7 @@ namespace Program
             int DefensaMago = MagoAD.CalcularDefensaTotal(((Mago)Rasagast).SombreroMagico.ListaItems);
             int AtaqueMago = MagoAD.CalcularAtaqueTotal(((Mago)Rasagast).SombreroMagico.ListaItems);
 
+            Rasagast.PrintInfo();
             Console.WriteLine($"Nombre del Mago : {((Mago)Rasagast).Name}");
             Console.WriteLine($"Ataque Total : {DañoTotalMago}");
             Console.WriteLine($"Defensa Total : {DefensaMago}");

@@ -19,6 +19,8 @@ public class Elfo : ICharacter
     }
     public void PrintInfo()
     {
-        
+        Console.WriteLine($"Nombre del Elfo : {this.Name}");
+        Console.WriteLine($"Vida : {this.Health}");
+        Bolsa.PrintInfo();
     }
 }

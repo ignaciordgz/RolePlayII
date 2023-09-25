@@ -19,6 +19,8 @@ public class Enano : ICharacter
     }
     public void PrintInfo()
     {
-        
+        Console.WriteLine($"Nombre del Enano : {this.Name}");
+        Console.WriteLine($"Vida : {this.Health}");
+        mochila.PrintInfo();
     }
 }
