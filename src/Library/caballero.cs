@@ -19,7 +19,7 @@ public class Caballero : ICharacter
     }
     public void PrintInfo()
     {
-        Console.WriteLine($"Nombre del caballero : {this.Name}");
+        Console.WriteLine($"Nombre del Caballero : {this.Name}");
         Console.WriteLine($"Vida : {this.Health}");
         funda.PrintInfo();
     }

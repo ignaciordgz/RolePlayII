@@ -14,27 +14,25 @@ namespace Program
             Item Armadura = new Item("Armadura", 0, 30);
             
             ((Caballero)Gervacio).funda.AgregarItem(Espada);
-            
-            Gervacio.PrintInfo();
             ((Caballero)Gervacio).funda.AgregarItem(Armadura);
-            Combate CaballeroAD = new Combate();
             
+            Combate CaballeroAD = new Combate();
             int AtaqueCaballero = CaballeroAD.CalcularAtaqueTotal(((Caballero)Gervacio).funda.ListaItems);
             int DefensaCaballero = CaballeroAD.CalcularDefensaTotal(((Caballero)Gervacio).funda.ListaItems);
             
-            Console.WriteLine($"Nombre del Caballero : {((Caballero)Gervacio).Name}");
-            Console.WriteLine($"Ataque Total : {AtaqueCaballero}");
-            Console.WriteLine($"Defensa Total : {DefensaCaballero}");
+            Gervacio.PrintInfo();
+            Console.WriteLine($"Ataque total del Caballero : {AtaqueCaballero}");
+            Console.WriteLine($"Defensa total del Caballero : {DefensaCaballero}");
             Console.WriteLine("------------------");
-            {
+            
             ICharacter Thorin = new Enano("Thorin");
-            Item hacha = new Item("hacha", 15, 2);
-            Item escudo = new Item("escudo", 0, 25);
+            Item Hacha = new Item("Hacha", 15, 2);
+            Item Escudo = new Item("Escudo", 0, 25);
 
-            ((Enano)Thorin).mochila.AgregarItem(hacha);
-            ((Enano)Thorin).mochila.AgregarItem(escudo);
+            ((Enano)Thorin).mochila.AgregarItem(Hacha);
+            ((Enano)Thorin).mochila.AgregarItem(Escudo);
 
-            Combate EnanoAD= new Combate();
+            Combate EnanoAD = new Combate();
             int AtaqueEnano = EnanoAD.CalcularAtaqueTotal(((Enano)Thorin).mochila.ListaItems);
             int DefensaEnano = EnanoAD.CalcularDefensaTotal(((Enano)Thorin).mochila.ListaItems);
 
@@ -93,8 +91,6 @@ namespace Program
             Console.WriteLine(MagoAD.PeleaMagoElfo((Mago)Rasagast,(Elfo)Lego));
             Console.WriteLine("------------------");
             Console.WriteLine(Combate.Curar((Mago)Rasagast,(Elfo)Lego,(Enano)Thorin,(Caballero)Gervacio));
-
-        }
         }
     }
-}
+} 
