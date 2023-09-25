@@ -83,10 +83,9 @@ namespace Program
 
             Combate MagoAD = new Combate ();
             int DefensaMago = MagoAD.CalcularDefensaTotal(((Mago)Rasagast).SombreroMagico.ListaItems);
-            int AtaqueMago = MagoAD.CalcularAtaqueTotal(((Mago)Rasagast).SombreroMagico.ListaItems);
 
             Rasagast.PrintInfo();
-            Console.WriteLine($"Nombre del Mago : {((Mago)Rasagast).Name}");
+            Console.WriteLine($"[Libro Hechizos] Ataque : 60 Defensa : 0");
             Console.WriteLine($"Ataque Total : {DañoTotalMago}");
             Console.WriteLine($"Defensa Total : {DefensaMago}");
             Console.WriteLine("------------------");
